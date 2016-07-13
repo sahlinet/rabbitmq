@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 MAINTAINER Fernando Mayo <fernando@tutum.co>
 
 # Install RabbitMQ
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F7B8CEA6056E8E56 && \
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B73A36E6026DFCA && \
     echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y rabbitmq-server pwgen && \
