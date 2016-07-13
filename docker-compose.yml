@@ -1,0 +1,7 @@
+queue:
+  image: sahlinet/rabbitmq:latest
+  ports:
+   - "5672"
+   - "15672"
+  environment:
+   - RABBITMQ_PASS=asdf
