@@ -1,0 +1,15 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker info
+    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+test:
+  override:
+    - docker build -t sahlinet/rabbitmq:latest .
+deployment:
+  trunk:
+    branch: master
+    commands:
+      - docker push sahlinet/rabbitmq:latest
